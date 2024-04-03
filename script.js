@@ -1,68 +1,51 @@
-//! 1.verilmish ededin 3-un quvveti olub, olmadigini tapan alqoritm yazin.
 
-// let num = parseInt(prompt("Ədədi daxil edin:"));
 
-// let quvvetdeyil = true;
-// for (let i = 3; i <= num; i *= 3) {
-//     if (num == i) {
-//         console.log(num + " ədədi 3-ün quvvətidir.");
-//         quvvetdeyil = false;
+// //! 1.Userdən 3 ədəd alın və aldığınız ədədlərin ədədi ortasını tapan alqoritm qurun.
+// let  num1=parseInt(prompt("1ci ededi daxil edin :"))
+// let num2=parseInt(prompt("2ci ededi edin :"))
+// let num3=parseInt(prompt("3ci ededi edin :"))
+// let edediOrta=(num1+num2+num3)/3
 
-//     }
-// }
+// console.log(edediOrta)
 
-// if (quvvetdeyil) {
-//     console.log(num + " 3-ün quvvəti deyil.");
-// }
+// //! 2.Userdən 3 ədəd alın və bu ədədlərin üçbucağın tərəfləri ola biləcəini qaytaran alqoritm qurun.Əgər olarsa true olmazsa ekranda false çap edilsin.
 
-//! 2.verilmish ededin Polidrom olub olmadigini yoxlayin. Polidrom ededlere numune:11 121 888 9119.
+// let a = parseInt(prompt("1ci ededi daxil edin :"));
+// let b = parseInt(prompt("2ci ededi edin :"));
+// let c = parseInt(prompt("3ci ededi edin :"));
 
-// let eded = prompt("Ədədi daxil edin:");
-
-// let uzunluq = eded.length;
-// let check = true;
-
-// for (let i = 0; i < parseInt(uzunluq) / 2; i++) {
-//   if (eded[i] !== eded[uzunluq - 1 - i]) {
-//     check = false;
+// if (a + b > c && a + c > b && b + c > a) {
+//   if (a <= 0 || b <= 0 || c <= 0) {
+//    console.log(false)
+//   } else {
+//     console.log(true)
 //   }
-// }
-
-// if (check) {
-//   console.log(eded + " polidrom ededdir.");
 // } else {
-//   console.log(eded + " polidrom deyil.");
+//     console.log(false)
 // }
+ 
+// //! 3.Userdən name və surname dəyərləri qəbul edin və fullname-ini ekranda çap edin (başqa bir variable-dan istifadə edin)
 
-//! 3. Verilmis ededin en yaxin asagi kokalti deyerini tapan alqoritm (imisalcun eded 20-dirse 4 qaytarmalidi, 25-dise 5 qaytarmalidi, 16-drisa 4 ve s.)
+// let name = prompt("Ad daxil edin :");
+// let surName = prompt("Soyad ededi edin :");
+// let fullName = name + " " + surName;
 
-// let num = parseInt(prompt( 'Ədəd daxil edin: '));
-// let a , b = num/ 2;
-
-// do {
-//    a = b;
-//    b = (a + (num / a)) / 2;
-// } while (a !== b);
-
-// console.log(a |0);
-
-//! 4.Verilmis array-deki reqemlerinin cemi 10-dan kicik olan ededlerin sayini tapan alqoritm
+// console.log(fullName);
 
 
-// let a = [155, 23, 445, 6, 8, 99];
-// let count = 0;
 
-// for (let i = 0; i < a.length; i++) {
-//   let num = a[i];
-//   let sumOfDigits = 0;
+//! 4.BMİ hesablayan alqoritm qurun.Userdən boy və çəki dəyərləri alın və buna əsasən BMİ hesablayın (boy=1.70 çəki=80 daxil edilsə çəki/boy-nin kavdratı olaraq hesablanır).
 
-//   for (; num > 0; num = (num / 10) | 0) {
-//     sumOfDigits += num % 10;
-//   }
 
-//   if (sumOfDigits < 10) {
-//     count++;
-//   }
-// }
+ let height = parseInt(prompt("Boyu sm ile daxil edin :"))/100;
+ let weight= parseInt(prompt("Ceki ededi edin :"));
 
-// console.log(count);
+ let bmi=weight/(height*height)
+
+if (bmi>=25) {
+  console.log("artıq çəkili")
+} else if(bmi>=18.5 && bmi<25){
+  console.log("normal ")
+}else{
+  console.log("arıq ")
+}
